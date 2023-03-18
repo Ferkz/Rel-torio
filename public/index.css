@@ -1,0 +1,24 @@
+#button-enviar{
+    font-size: 20px;
+    text-align: center;
+    margin:20px 0px;
+    background-color: rgb(17, 41, 88);
+    padding: 10px;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    thead,tbody{
+        font-size: 12px;
+        font-weight: 0;
+    }
+    th{
+        width: 10px;
+    }
+    #modelo{
+        content: none;
+    }
+    
+}

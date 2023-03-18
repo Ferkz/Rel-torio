@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+   
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relátorio impressão Samar</title>
+    
+   
+  </head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <form type="submit" action="http://10.100.50.252:8180/criar" method="post">
+                <label for="setor">Setor</label>
+                <input class="form-control" type="text" placeholder="Setor" required="true" name="setor">
+                <label for="data">Data</label>
+                <input class="form-control" type="date" placeholder="Data" required="true" name="data">
+                <label for="ip">Endereço IP</label>
+                <input class="form-control" type="text" placeholder="IP" name="ip">
+                <label for="modelo">Modelo da impressora</label>
+                <input class="form-control" type="text" placeholder="Modelo da impressora" required="true" name="modelo">
+                <label for="n-anterior">Número de impressão Anterior</label>
+                <input class="form-control" type="number" placeholder="Número de impressão Anterior" required="true" name="anterior">
+                <label for="n-atual">Número de impressão Atual</label>
+                <input class="form-control" type="number" placeholder="Número de impressão Atual" required="true" name="atual">
+                <button class="btn" id="button-enviar">Enviar Dados</button>
+            </form>
+        </div>
+    </div>
+    <div class="container mt-03">
+        <h3>Dados Relátorios</h3>
+       
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="table-primary">Setor</th>
+                    <th class="table-primary">Data</th>
+                    <th class="table-primary">Endereço IP</th>
+                    <th class="table-primary" id="modelo">Modelo da Impressora</th>
+                    <th class="table-primary">Número de impressão Anterior</th>
+                    <th class="table-primary">Número de impressão Atual</th>
+                    <th class="table-primary">Total</th>
+                    <th class="table-primary">Deletar dados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <div class="fid">
+                        <% modelos.forEach((modelo)=>{ %>
+                 
+                            
+                           
+                    </div>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                  <th scope="row"><%= modelo.setor %></th>
+                  <th scope="row"><%= modelo.data %></th>
+                  <th scope="row"><%= modelo.ip %></th>
+                  <th scope="row"><%= modelo.modelo %></th>
+                  <th scope="row"><%= modelo.anterior %></th>
+                  <th scope="row"><%= modelo.atual%></th>
+                  <th scope="row"><%= modelo.atual - modelo.anterior %></th>
+                  <td><button class="btn btn-danger">Excluir</button></td>
+                  
+                  
+                </tr>
+               
+                <% }) %>
+              </tbody>
+        </table>
+
+                
+    
+            
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
