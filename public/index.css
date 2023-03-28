@@ -1,24 +1,43 @@
-#button-enviar{
-    font-size: 20px;
+.title{
+    text-align: center;
+}
+#button-enviar, .button-cadastro{
+    background-color: rgb(17, 41, 88);
     text-align: center;
     margin:20px 0px;
-    background-color: rgb(17, 41, 88);
+    font-size: 20px;
     padding: 10px;
     color: white;
 }
-
+#button-deletar {
+    background-color: rgb(17, 41, 88);
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    
+}
+.formulario{
+    display: none;
+}
 
 
 @media only screen and (max-width: 600px) {
     thead,tbody{
         font-size: 12px;
         font-weight: 0;
+        position: relative;
+        width: 100%;
     }
-    th{
-        width: 10px;
+    .flex{
+        width: 100%;
     }
-    #modelo{
-        content: none;
+  
+    #button-deletar{
+        font-size: 12px;
+       
+       
     }
+    
     
 }
